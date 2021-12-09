@@ -65,7 +65,7 @@
             aside{
                 background: linear-gradient(#fff, #e7e8e9);
             }
-            
+
   </style>
 
   <!--ESTO SERVIRÁ PARA COMPARAR UN ANTES Y UN DESPUÉS-->
@@ -339,15 +339,93 @@
     </section>
   </main>
 
-  <footer class="bg-dark text-white-50">
-    <div class="container">
-      <div class="row">
-        <div class="col py-5">
-          <p class="text-center small">...</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+
+
+  <!-- Cierre con Fuentes - impreso - otros -->
+
+   <aside>
+            <div class="container small text-center">
+                <div class="row py-5">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h5 class="fs-6 mb-3">Fuentes</h5>
+
+                        <p>
+                            <a href="http://visibleearth.nasa.gov/view.php?id=40173">NASA Visible Earth</a> &bull; <a href="http://orbitaldebris.jsc.nasa.gov/">NASA Orbital Debris Program Office</a> &bull;
+                            <a href="http://www.ucsusa.org/">UCS Union of Concerned Scientics</a> &bull; <a href="http://www.jpl.nasa.gov/">NASA Jet Propulsion Laboratory</a> &bull; <a href="#">SSN (U.S. Space Surveillance Network)</a>
+                        </p>
+
+                        <p><em>Agradecimientos a</em> mi mismo XD</p>
+
+                        <h5 class="fs-6 mt-5 mb-3">Versión impresa</h5>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImpreso">
+                            <img src="files/tapir_impreso.jpg" class="w-50 shadow-sm mb-5" alt="infografía impresa pequeña" />
+                        </a>
+                        <div class="modal fade" id="modalImpreso" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-fullscreen">
+                                <img src="files/tapir_impreso.jpg" class="w-100" alt="infografía impresa grande" />
+                            </div>
+                        </div>
+
+                        <p class="small">
+                            <em><a href="https://www.diplomadodeinfografia.cl/" class="link-dark" target="_blank">Diplomado de Infografía</a> &bull; 2021</em><br />
+                            Escuela de Diseño de la Pontificia Universidad Católica de Chile<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-light">
+                <div class="container py-5">
+                    <div class="row">
+                        <h4 class="col-12 mb-4 text-center">También te puede interesar</h4>
+                    </div>
+                    <div class="row g-4" id="colegas"></div>
+                    <script>
+                        const colegas = document.getElementById("colegas");
+                        const datos = [
+                            { especie: "Gibón de manos blancas", imagen: "https://picsum.photos/id/237/300/300", descripcion: "Lorem ipsum dolor sit amet.", url: "https://gibon-de-manos-blancas.github.io/avance/" },
+                            { especie: "Grulla de cuello blanco", imagen: "https://picsum.photos/id/237/300/300", descripcion: "Lorem ipsum dolor sit amet.", url: "https://grulla-de-cuello-blanco.github.io/avance" },
+                            { especie: "Hipopotamo pigmeo", imagen: "https://picsum.photos/id/237/300/300", descripcion: "Un pequeño caballo de río.", url: "https://hipopotamo-pigmeo.github.io/avance" },
+                            { especie: "Panda rojo", imagen: "https://picsum.photos/id/237/300/300", descripcion: "El animal más lindo del mundo.", url: "https://infografia-panda-rojo.github.io/avance" },
+                            { especie: "Lemur cola anillada", imagen: "https://picsum.photos/id/237/300/300", descripcion: "El zorrillo de Madagascar.", url: "https://lemur-cola-anillada.github.io/avance" },
+                            { especie: "Orangutan borneo", imagen: "https://picsum.photos/id/237/300/300", descripcion: "El hombre del bosque.", url: "https://orangutan-borneo-uc.github.io/avance" },
+                            { especie: "Oso malayo", imagen: "https://picsum.photos/id/237/300/300", descripcion: "El oso más pequeño", url: "https://oso-malayo.github.io/avance" },
+                            { especie: "Siamang", imagen: "https://picsum.photos/id/237/300/300", descripcion: "El acróbata de la selva.", url: "https://siamang-infografia.github.io/avance" },
+                            { especie: "Tapir amazonico", imagen: "https://github.com/tapir-amazonico/avance/blob/main/files/grupal.jpg?raw=true", descripcion: "El jardinero de la selva.", url: "https://tapir-amazonico.github.io/avance" },
+                            { especie: "Tigre de bengala", imagen: "https://picsum.photos/id/237/300/300", descripcion: "El felino más grande del mundo.", url: "https://tapir-amazonico.github.io/avance" }
+                        ];
+
+                        datos.forEach((d) => {
+                            if(d.especie != "Tapir amazonico"){
+                                colegas.innerHTML +=
+                                    '<div class="col-12 col-md-6 col-lg-4"><div class="row shadow-sm g-0 small align-items-center bg-white"><div class="col-3"><img src="' +
+                                    d.imagen + '" alt="' +
+                                    d.especie +
+                                    '" class="w-100"></div><div class="col-9 p-2"><em>' +
+                                    d.especie +
+                                    '</em>, <a href="' +
+                                    d.url +
+                                    '">' +
+                                    d.descripcion +
+                                    "</a></div></div></div>";
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </aside>
+
+        <!--ESTE ES EL PIE DE PÁGINA-->
+        <footer class="bg-dark text-white-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col py-3">
+                        <p class="text-center small">
+                            Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-light">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 <!--BOOTSTRAP OFRECE SU PROPIA BIBLIOTECA DE JAVASCRIPT-->
