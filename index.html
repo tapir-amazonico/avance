@@ -13,13 +13,23 @@
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 
-
-
     :root {
       --bs-body-font-family: "Roboto", sans-serif;
       --bs-primary: #8f8e39;
     }
-
+    
+    a {
+      color: #222;
+      text-decoration: underline;
+      transition: color ease 0.5s;
+    }
+    
+    a:hover {
+      color: var(--bs-primary);
+      text-decoration: none;
+      transition: color ease 0.5s;
+    }    
+    
     h1,
     h2,
     h3 {
@@ -64,16 +74,7 @@
 
             aside{
                 background: linear-gradient(#fff, #e7e8e9);
-            }
-    
-a{
-                color:black;
-                text-decoration:none;
-            }
-            a:hover{
-                color:var(--bs-primary);
-                text-decoration:underline;
-            }    
+            }  
 
   </style>
 
