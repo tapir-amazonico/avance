@@ -13,23 +13,13 @@
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 
+
+
     :root {
       --bs-body-font-family: "Roboto", sans-serif;
       --bs-primary: #8f8e39;
     }
-    
-    a {
-      color: #222;
-      text-decoration: underline;
-      transition: color ease 0.5s;
-    }
-    
-    a:hover {
-      color: var(--bs-primary);
-      text-decoration: none;
-      transition: color ease 0.5s;
-    }    
-    
+
     h1,
     h2,
     h3 {
@@ -69,12 +59,13 @@
     }
 
     span[data-bs-toggle="popover"]{
-      cursor: pointer;
-    }
-    
-    aside{
-      background: linear-gradient(#fff, #e7e8e9);
-    }  
+                cursor: pointer;
+            }
+
+            aside{
+                background: linear-gradient(#fff, #e7e8e9);
+            }
+
   </style>
 
   <!--ESTO SERVIRÁ PARA COMPARAR UN ANTES Y UN DESPUÉS-->
@@ -359,15 +350,15 @@
                         <h5 class="fs-6 mb-3">Fuentes</h5>
 
                         <p>
-                            <a href="http://visibleearth.nasa.gov/view.php?id=40173">NASA Visible Earth</a> &bull; <a href="http://orbitaldebris.jsc.nasa.gov/">NASA Orbital Debris Program Office</a> &bull;
-                            <a href="http://www.ucsusa.org/">UCS Union of Concerned Scientics</a> &bull; <a href="http://www.jpl.nasa.gov/">NASA Jet Propulsion Laboratory</a> &bull; <a href="#">SSN (U.S. Space Surveillance Network)</a>
+                            <a href="https://sib.gob.ar/especies/tapirus-terrestris?">SIB Argentina</a> &bull; <a href="https://www.nationalgeographic.org/projects/photo-ark/animal/tapirus-terrestris/">National Geographic</a> &bull;
+                            <a href="https://tapirs.org">tapirs.org</a> &bull; <br> <a href="https://www.orinoquiabiodiversa.org">Fundación Orinoquia Biodiversa</a> &bull; <a href="https://tapirs.org/wp-content/uploads/2018/03/TSG-MANUAL-VETERINARIO-DEL-TAPIR_2nd-Edition_Quse-and-Fernandes-Santos-2014-SPANISH.pdf">Manual veterinario del Tapir</a> 
                         </p>
 
-                        <p><em>Agradecimientos a</em> mi mismo XD</p>
+                    <!--   <p><em>Agradecimientos a</em> mi mismo XD</p>  -->
 
                         <h5 class="fs-6 mt-5 mb-3">Versión impresa</h5>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#modalImpreso">
-                            <img src="files/tapir_impreso.jpg" class="w-50 shadow-sm mb-5" alt="infografía impresa pequeña" />
+                            <img src="files/tapir_impreso.jpg" class="w-50 shadow-sm mb-5" loading=“lazy” alt="infografía impresa pequeña" />
                         </a>
                         <div class="modal fade" id="modalImpreso" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog modal-fullscreen">
@@ -388,36 +379,37 @@
                         <h4 class="col-12 mb-4 text-center">También te puede interesar</h4>
                     </div>
                     <div class="row g-4" id="colegas"></div>
-               <script>
-                  const colegas = document.getElementById("colegas");
-                  const datos = [
-                     { especie: "Gibón de manos blancas", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/gibon.jpg", descripcion: "el danzarín del bosque.", url: "https://gibon-de-manos-blancas.github.io/avance/" },
-                     { especie: "Grulla de cuello blanco", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/grulla.jpg", descripcion: "un viajera romántica.", url: "https://grulla-de-cuello-blanco.github.io/avance" },
-                     { especie: "Hipopótamo pigmeo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/hipopotamo.jpg", descripcion: "un pequeño caballo de río.", url: "https://hipopotamo-pigmeo.github.io/avance" },
-                     { especie: "Panda rojo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/panda.jpg", descripcion: "el animal más lindo del mundo.", url: "https://infografia-panda-rojo.github.io/avance" },
-                     { especie: "Lemur de cola anillada", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/lemur.jpg", descripcion: "el zorrillo de Madagascar.", url: "https://lemur-cola-anillada.github.io/avance" },
-                     { especie: "Orangután de borneo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/orangutan.jpg", descripcion: "el hombre del bosque.", url: "https://orangutan-borneo-uc.github.io/avance" },
-                     { especie: "Oso malayo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/oso.jpg", descripcion: "el oso más pequeño.", url: "https://oso-malayo.github.io/avance" },
-                     { especie: "Siamang", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/siamang.jpg", descripcion: "el acróbata de la selva.", url: "https://siamang-infografia.github.io/avance" },
-                     { especie: "Tapir amazónico", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/tapir.jpg", descripcion: "el jardinero de la selva.", url: "https://tapir-amazonico.github.io/avance" },
-                     { especie: "Tigre de bengala", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/tigre.jpg", descripcion: "el felino más grande del mundo.", url: "https://tigre-de-bengala.github.io/avance/" }
-                  ];
-                  datos.forEach((d) => {
-                     if(d.especie != "Tapir amazónico"){
-                        colegas.innerHTML +=
-                           '<div class="col-12 col-md-6 col-lg-4"><div class="row shadow-sm g-0 small align-items-center bg-white"><div class="col-3"><img loading="lazy" src="' +
-                           d.imagen + '" alt="' +
-                           d.especie +
-                           '" class="w-100"></div><div class="col-9 p-2"><em>' +
-                           d.especie +
-                           '</em>, <a href="' +
-                           d.url +
-                           '">' +
-                           d.descripcion +
-                           "</a></div></div></div>";
-                     }
-                  });
-               </script>
+                    <script>
+                        const colegas = document.getElementById("colegas");
+                        const datos = [
+                            { especie: "Gibón de manos blancas", imagen: "https://raw.githubusercontent.com/Gibon-de-manos-blancas/avance/main/archivos/grupal.jpg", descripcion: "el danzarin del bosque.", url: "https://gibon-de-manos-blancas.github.io/avance/" },
+                            { especie: "Grulla de cuello blanco", imagen: "https://picsum.photos/id/237/300/300", descripcion: "un viajera romántica.", url: "https://grulla-de-cuello-blanco.github.io/avance" },
+                            { especie: "Hipopótamo pigmeo", imagen: "https://raw.githubusercontent.com/hipopotamo-pigmeo/avance/main/files/grupal.jpg", descripcion: "un pequeño caballo de río.", url: "https://hipopotamo-pigmeo.github.io/avance" },
+                            { especie: "Panda rojo", imagen: "https://picsum.photos/id/237/300/300", descripcion: "el animal más lindo del mundo.", url: "https://infografia-panda-rojo.github.io/avance" },
+                            { especie: "Lemur cola anillada", imagen: "https://raw.githubusercontent.com/lemur-cola-anillada/avance/main/files/grupal.png", descripcion: "el zorrillo de Madagascar.", url: "https://lemur-cola-anillada.github.io/avance" },
+                            { especie: "Orangutan borneo", imagen: "https://raw.githubusercontent.com/orangutan-borneo-uc/avance/main/imgs/grupal.jpg", descripcion: "el hombre del bosque.", url: "https://orangutan-borneo-uc.github.io/avance" },
+                            { especie: "Oso malayo", imagen: "https://raw.githubusercontent.com/oso-malayo/Avance/main/cositas/grupal.png", descripcion: "el oso más pequeño", url: "https://oso-malayo.github.io/avance" },
+                            { especie: "Siamang", imagen: "https://avatars.githubusercontent.com/u/95137910?s=200&v=4", descripcion: "El acróbata de la selva.", url: "https://siamang-infografia.github.io/avance" },
+                            { especie: "Tapir amazónico", imagen: "https://raw.githubusercontent.com/tapir-amazonico/avance/main/files/grupal.jpg", descripcion: "el jardinero de la selva.", url: "https://tapir-amazonico.github.io/avance" },
+                            { especie: "Tigre de bengala", imagen: "https://raw.githubusercontent.com/Tigre-de-Bengala/avance/main/grupal.jpg", descripcion: "el felino más grande del mundo.", url: "https://tapir-amazonico.github.io/avance" }
+                        ];
+
+                        datos.forEach((d) => {
+                            if(d.especie != "Tapir amazónico"){
+                                colegas.innerHTML +=
+                                    '<div class="col-12 col-md-6 col-lg-4"><div class="row shadow-sm g-0 small align-items-center bg-white"><div class="col-3"><img src="' +
+                                    d.imagen + '" alt="' +
+                                    d.especie +
+                                    '" class="w-100"></div><div class="col-9 p-2"><em>' +
+                                    d.especie +
+                                    '</em>, <a href="' +
+                                    d.url +
+                                    '">' +
+                                    d.descripcion +
+                                    "</a></div></div></div>";
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </aside>
