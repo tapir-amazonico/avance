@@ -19,24 +19,13 @@
       --bs-body-font-family: "Roboto", sans-serif;
       --bs-primary: #8f8e39;
     }
-    
-    a {
-      color: #222;
-      text-decoration: underline;
-      transition: color ease 0.5s;
-    }
-    
-    a:hover {
-      color: var(--bs-primary);
-      text-decoration: none;
-      transition: color ease 0.5s;
-    }    
-    
+
     h1,
     h2,
     h3 {
-      font-weight: 400;
+      font-weight: 700;
       font-family: "Open Sans", sans-serif;
+      color: #5e6200;
     }
 
     h4,
@@ -72,11 +61,12 @@
 
     span[data-bs-toggle="popover"]{
                 cursor: pointer;
-    }
+            }
+
+            aside{
+                background: linear-gradient(#fff, #e7e8e9);
+            }
     
-    aside{
-      background: linear-gradient(#fff, #e7e8e9);
-    }
 
   </style>
 
@@ -193,6 +183,9 @@
     </div>
   </header>
 
+
+<!-- MAIN-->
+
   <main class="pb-5">
     <img src="files/tapir_ilustration_01.jpg" class="d-none d-md-block w-100"
       alt="Es una ilustración de un tapir Amazónico" />
@@ -216,21 +209,57 @@
       </div>
     </section>
 
+<!-- Clase -->   
+
+<section>
+    <div class="container mt-3 col-sm-10 col-md-9 col-lg-8 col-xl-7 mx-auto">
+        <div class="row">
+            <h3 class="text-center pt-5 pb-2">Clasificación</h3>
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded" style="width: 300px; background: #8e8e23;">
+                <div class="p-1 mb-1 text-white"><strong>Clase:</strong> <i style="margin-left: 27px;">Mamíferos</i>
+                </div>
+
+            </div>
+
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded" style="width: 300px; background: #8e8e23;">
+                <div class="p-1 mb-1 text-white"><strong>Orden:</strong> <i style="margin-left: 25px;">Perisodáctilos</i>
+                </div>
+
+            </div> 
+
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded" style="width: 300px; background: #8e8e23;">
+                <div class="p-1 mb-1 text-white"><strong>Familia:</strong> <i style="margin-left: 15px">Tapíridos</i>
+                </div>
+
+            </div> 
+        </div>        
+    </div>
+</section>
+
+
+<!-- Zona donde vive -->
+
+
     <section class="container">
-      <div class="row">
-        <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7 mx-auto">
-          <h3 class="text-center pt-5 pb-2">Selva amazónica</h3>
+        <div class="row">
+            <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7 mx-auto">
+                <h3 class="text-center pt-5 pb-2">Selva amazónica</h3>
 
-          <p>El tapir amazónico habita solamente en regiones cálidas de América del Sur, al este de los Andes.
-            Se distribuye en el norte de Argentina, zonas cálidas húmedas y yungas de Bolivia —salvo en
-            áreas altiplánicas—, gran parte de Brasil, Colombia —salvo el oeste—, Ecuador —salvo el oeste—,
-            Guayana, Paraguay, Perú —al este de los Andes— y Venezuela.</p>
+                <p>El tapir amazónico habita solamente en regiones cálidas de América del Sur, al este de los Andes.
+                Se distribuye en el norte de Argentina, zonas cálidas húmedas y yungas de Bolivia —salvo en
+                áreas altiplánicas—, gran parte de Brasil, Colombia —salvo el oeste—, Ecuador —salvo el oeste—,
+                Guayana, Paraguay, Perú —al este de los Andes— y Venezuela.</p>
 
-          <figure class="text-center my-5">
-            <object class="w-50 mx-auto" data="files/mapa_zona.svg" type="image/svg+xml"></object>
-          </figure>
+                <figure class="text-center my-5">
+                    <object class="w-50 mx-auto" data="files/mapa_zona.svg" type="image/svg+xml"></object>
+                </figure>
+            </div>
+        
+            <div class="embed-responsive embed-responsive-1by1 col-sm-12 col-md-9 col-lg-8 col-xl-7 mx-auto">
+            <iframe width="500" height="500" class="embed-responsive-item" src="https://www.youtube.com/embed/-NI7pdrrc-g" allowfullscreen></iframe> FALTA ALINEAR CORRECTAMENTE
+            </div>
+
         </div>
-      </div>
     </section>
 
     <section class="container">
@@ -241,6 +270,8 @@
           <p>Son vitales en la diversidad y riqueza de bosques en los que habitan, ya que dispersan semillas
             en sus fecas. Además, al ser selectivos con sus alimentos, pueden manipular qué tipo de
             vegetación crece en el lugar.</p>
+
+            <p>FALTA INSERTAR ANIMACION DE TRANSFORMACION DE ELEMENTOS</p>
 
           <div class="row d-flex align-items-end text-center">
             <div class="col">
@@ -260,6 +291,41 @@
       </div>
     </section>
 
+<!-- Data -->
+
+<section class="container">
+    <div class="row">
+        <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7 mx-auto">
+            <h3 class="text-center pt-5 pb-2">Alimentación</h3>
+
+            <h5>Herbívoro:</h5>
+
+            <div class="row d-flex align-items-end text-center">
+                <div class="col">
+                     <object class="w-100" data="files/food_flor.svg" type="image/svg+xml"></object>
+                    <p>Flores</p>
+                </div>
+                <div class="col">
+                    <object class="w-100" data="files/food_fruta.svg" type="image/svg+xml"></object>
+                    <p>Frutas</p>
+                </div>
+                <div class="col">
+                    <object class="w-100" data="files/food_semilla.svg" type="image/svg+xml"></object>
+                    <p>Semillas</p>
+                </div>
+                <div class="col">
+                    <object class="w-100" data="files/food_hoja.svg" type="image/svg+xml"></object>
+                    <p>Hojas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Rayos X -->
+
     <section class="container">
       <div class="row">
         <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7 mx-auto">
@@ -272,7 +338,63 @@
 
           <p>Marcan con orina su territorio, lo que puede llevarles a pelear entre machos por medio de
             mordidas en su lomo, patas y pelvis.</p>
+        </div>
+    </section>
 
+
+<!-- Tamaño -->   
+
+<div class="container mb-1 col-12 col-md-8 mx-auto">
+    <div class="row justify-content-between">
+          
+
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded-pill" style="background: #8e8e23; background-image: url(files/tapir_01.svg); background-position: right; background-repeat: no-repeat; background-size: 40%;">
+                <div class="p-1 text-white" style="font-size: 20px; font-weight: 300">Altura
+                </div>
+                <div class="p-1 text-white"><h4>75 - 120 cm</h4>
+                </div>
+                
+            </div>
+
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded-pill" style="background: #8e8e23; background-image: url(files/tapir_02.svg); background-position: right; background-repeat: no-repeat; background-size: 40%;">
+                <div class="p-1 text-white" style="font-size: 20px; font-weight: 300">Peso
+                </div>
+                <div class="p-1 text-white"><h4>225 - 300 kg.</h4>
+                </div>
+
+            </div> 
+
+        </div>   
+       
+        <div class="col-12 col-md-6 col-lg-6">    
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded-pill" style="background: #8e8e23; background-image: url(files/tapir_03.svg); background-position: right; background-repeat: no-repeat; background-size: 40%;">
+                <div class="p-1 text-white" style="font-size: 20px; font-weight: 300">Longitud
+                </div>
+                <div class="p-1 text-white"><h4>180 - 200 cm</h4>
+                </div>
+
+            </div> 
+
+            <div class="mb-1 mt-1 mx-auto px-4 py-2 shadow-sm rounded-pill" style="background: #8e8e23; background-image: url(files/tapir_04.svg); background-position: right; background-repeat: no-repeat; background-size: 40%;">
+                <div class="p-1 text-white" style="font-size: 20px; font-weight: 300">Longitud cola
+                </div>
+                <div class="p-1 text-white"><h4>5 - 10 cm</h4>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+    </div>        
+</div>
+
+
+<!-- Partes -->
+
+    <section class="container col-10 col-sm-8 col-xl-5 mx-auto justify-content-around">
+      <div class="row">
           <div class="row mb-4">
             <div class="col-sm-6 mb-3">
               <img src="files/tapir_musculos_c.jpg" class="w-100 my-3"
@@ -296,8 +418,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
+
+<!-- FAMILIA -->
 
     <section class="container">
       <div class="row">
@@ -322,8 +447,8 @@
               <p>Muestran diferencias de tamaño y color. A las especies confirmadas se suma, además, una  nueva sólo propuesta* <i>(Tapirus kabomani)</i>.</p>
             </div>
 
-            <div class="col-sm-12  col-md-6">
-              <h2 class="mb-4">Tapirus terrestris</h2>      
+            <div class="col-sm-12  col-md-6 mt-1">
+              <h5 class="mb-4">Tapirus terrestris</h5>      
               <object class="w-60 mt-4" data="files/tapir_silueta03.svg" type="image/svg+xml"></object>
             </div>
 
@@ -361,7 +486,35 @@
         </div>
       </div>
     </section>
-  </main>
+
+
+<!-- Linea Tiempo -->
+
+    <section class="container">
+        <div class="row">
+            <div><h3 class="text-center">REPRODUCCIÓN</h3></div>
+            <div><object class="w-50  float-right col-6" data="files/linea_tiempo.svg" type="image/svg+xml"></object></div>
+            
+        </div>
+    </section>
+
+
+<!-- Amenazas -->
+
+    <section class="container">
+        <div class="row">
+
+            <div><h3 class="text-center">AMENAZAS</h3></div>
+
+            <div class="embed-responsive embed-responsive-1by1 col-sm-12 col-md-9 col-lg-8 col-xl-7 mx-auto">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qg0lUeUYxsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> ACTIVISTA, PODRIA AÑADIRSE QUIZA
+            </div>
+            
+        </div>
+    </section>
+
+
+</main>
 
 
 
@@ -465,6 +618,8 @@
         </script>
 
 
+<!-- SONIDO -->
+
   <script>
     var canto = document.getElementById("elAudio");
     var boton = document.getElementById("elSwitch");
@@ -476,6 +631,10 @@
       }
     });
   </script>
+
+
+  <!-- COMPARACIÓN -->
+
   <script>
     const selector = document.getElementById("selector");
     const seleccion = document.getElementById("seleccion");
