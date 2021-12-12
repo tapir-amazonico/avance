@@ -19,7 +19,19 @@
       --bs-body-font-family: "Roboto", sans-serif;
       --bs-primary: #8f8e39;
     }
-
+    
+    a {
+      color: #222;
+      text-decoration: underline;
+      transition: color ease 0.5s;
+    }
+    
+    a:hover {
+      color: var(--bs-primary);
+      text-decoration: none;
+      transition: color ease 0.5s;
+    }    
+    
     h1,
     h2,
     h3 {
@@ -60,11 +72,11 @@
 
     span[data-bs-toggle="popover"]{
                 cursor: pointer;
-            }
-
-            aside{
-                background: linear-gradient(#fff, #e7e8e9);
-            }
+    }
+    
+    aside{
+      background: linear-gradient(#fff, #e7e8e9);
+    }
 
   </style>
 
